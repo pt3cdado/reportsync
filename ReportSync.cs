@@ -320,7 +320,7 @@ namespace ReportSync
                         File.WriteAllBytes(destPath, contents);
                         continue;
                     }
-                    if (itemType == ItemTypeEnum.Report || itemType == ItemTypeEnum.LinkedReport)
+                    if (itemType == ItemTypeEnum.Report) //|| itemType == ItemTypeEnum.LinkedReport) //Comment David
                     {
                         var reportDef = _sourceServicesMgmt.ReportingService.GetReportDefinition(itemPath);
                         var rdl = new XmlDocument();
